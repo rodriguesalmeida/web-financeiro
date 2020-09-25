@@ -1,6 +1,7 @@
 import { Usuario } from './../../../models/usuario';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormControlName, FormGroup } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-usuario-cadastro',
@@ -15,9 +16,14 @@ export class UsuarioCadastroComponent implements OnInit {
     login: new FormControl(),
     senha:new FormControl()    
   })
-  constructor() { }
+  constructor(private route:ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.route.params.subscribe((params)=>{
+      console.log(params);
+      this.usuario = params as Usuario;
+      this.form.patchValue(this.usuario);
+    })
   }
 
   public salvar(){
