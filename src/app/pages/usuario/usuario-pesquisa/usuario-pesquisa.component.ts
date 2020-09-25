@@ -10,7 +10,7 @@ import { MatTableDataSource } from '@angular/material/table';
 export class UsuarioPesquisaComponent implements OnInit {
   public usuarios:Usuario[] = [];
   public dataSource:MatTableDataSource<Usuario> = new MatTableDataSource(this.usuarios);
-  public displayedColumns:string[] = ['nome','login','senha'] ;
+  public displayedColumns:string[] = ['nome','login','senha','acoes'] ;
   constructor() { }
 
   ngOnInit(): void {
@@ -19,6 +19,13 @@ export class UsuarioPesquisaComponent implements OnInit {
       this.usuarios = JSON.parse(jsonUsers);
     }
     this.dataSource = new MatTableDataSource(this.usuarios);
+    
+  }
+
+  public remover(usuario){
+
+  }
+  public alterar(usuario){
     
   }
 

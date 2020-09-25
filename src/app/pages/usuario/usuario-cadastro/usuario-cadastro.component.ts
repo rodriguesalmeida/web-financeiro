@@ -35,6 +35,8 @@ export class UsuarioCadastroComponent implements OnInit {
     usuarios.push(this.usuario); 
     localStorage.setItem('usuarios', JSON.stringify(usuarios));
     console.table(usuarios);
+    alert('Salvo com Sucesso');
+    this.form.reset();
   }
 
 }
