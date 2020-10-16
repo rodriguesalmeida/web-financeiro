@@ -8,8 +8,8 @@
     </mat-menu>
     <button mat-button [matMenuTriggerFor]="menuCategoria">Categoria</button>
     <mat-menu #menuCategoria="matMenu">
-      <button mat-menu-item >Cadastro</button>
-      <button mat-menu-item>Pesquisa</button>
+      <button mat-menu-item routerLink="categoria/cadastro">Cadastro</button>
+      <button mat-menu-item routerLink="categoria/pesquisa">Pesquisa</button>
     </mat-menu>
   </mat-toolbar>
   <div class="container">

@@ -17,12 +17,14 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { UsuarioPesquisaComponent } from './pages/usuario/usuario-pesquisa/usuario-pesquisa.component';
 import {MatTableModule} from '@angular/material/table';
 import { CategoriaCadastroComponent } from './pages/categoria/categoria-cadastro/categoria-cadastro.component';
+import { CategoriaPesquisaComponent } from './pages/categoria/categoria-pesquisa/categoria-pesquisa.component';
 @NgModule({
   declarations: [
     AppComponent,
     UsuarioCadastroComponent,
     UsuarioPesquisaComponent,
-    CategoriaCadastroComponent
+    CategoriaCadastroComponent,
+    CategoriaPesquisaComponent
   ],
   imports: [
     BrowserModule,

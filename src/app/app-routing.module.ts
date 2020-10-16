@@ -2,6 +2,8 @@ import { UsuarioPesquisaComponent } from './pages/usuario/usuario-pesquisa/usuar
 import { UsuarioCadastroComponent } from './pages/usuario/usuario-cadastro/usuario-cadastro.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CategoriaCadastroComponent } from './pages/categoria/categoria-cadastro/categoria-cadastro.component';
+import { CategoriaPesquisaComponent } from './pages/categoria/categoria-pesquisa/categoria-pesquisa.component';
 
 const routes: Routes = [
   {
@@ -16,6 +18,14 @@ const routes: Routes = [
   {
     path:'usuario/pesquisa',
     component:UsuarioPesquisaComponent
+  },
+  {
+    path:'categoria/cadastro',
+    component:CategoriaCadastroComponent
+  },
+  {
+    path:'categoria/pesquisa',
+    component:CategoriaPesquisaComponent
   }
 ];
 
