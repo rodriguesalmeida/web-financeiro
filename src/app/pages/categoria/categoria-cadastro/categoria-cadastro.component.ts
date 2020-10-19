@@ -2,18 +2,25 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { Categoria } from 'src/app/models/categoria';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CategoriaService } from 'src/app/services/categoria.service';
 
 @Component({
   selector: 'app-categoria-cadastro',
   templateUrl: './categoria-cadastro.component.html',
-  styleUrls: ['./categoria-cadastro.component.scss']
+  styleUrls: ['./categoria-cadastro.component.scss'],
+  providers:[
+    CategoriaService
+  ]
 })
 export class CategoriaCadastroComponent implements OnInit {
 
   public form:FormGroup;
   public categoria:Categoria = new Categoria();
 
-  constructor(private route:ActivatedRoute,private router:Router,public formBuilder:FormBuilder ) { }
+  constructor(private route:ActivatedRoute,private router:Router,public formBuilder:FormBuilder,
+    private categoriaService:CategoriaService ) {
+
+  }
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
@@ -32,17 +39,11 @@ export class CategoriaCadastroComponent implements OnInit {
       return;
     }
     this.categoria = this.form.value;
-    let jsonVector = localStorage.getItem("categorias");
-    let categorias = [];
-    if (jsonVector != null){
-      categorias = JSON.parse(jsonVector);
-    }
-    categorias.push(this.categoria);
-    localStorage.setItem('categorias', JSON.stringify(categorias));
-
-    console.table(categorias);
-    alert('Salvo com sucesso');
-    this.router.navigate(['categoria/pesquisa']);    
+    this.categoriaService.salvar(this.categoria).subscribe((categoria)=>{
+      alert('Salvo com sucesso');
+      console.table(categoria);
+      this.router.navigate(['categoria/pesquisa']);    
+    });
   }
 
 }
