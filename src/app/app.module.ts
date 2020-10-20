@@ -18,6 +18,7 @@ import { UsuarioPesquisaComponent } from './pages/usuario/usuario-pesquisa/usuar
 import {MatTableModule} from '@angular/material/table';
 import { CategoriaCadastroComponent } from './pages/categoria/categoria-cadastro/categoria-cadastro.component';
 import { CategoriaPesquisaComponent } from './pages/categoria/categoria-pesquisa/categoria-pesquisa.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +32,7 @@ import { CategoriaPesquisaComponent } from './pages/categoria/categoria-pesquisa
     FormsModule,
     ReactiveFormsModule,
     CommonModule,
+    HttpClientModule,
     MatButtonModule,
     MatCardModule,
     MatFormFieldModule,

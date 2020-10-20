@@ -28,11 +28,11 @@ export class CategoriaService extends AbstractService {
     }
 
     public buscarPorId(id):Observable<Categoria>{
-        return this.http.get<Categoria>(this.getUrl(`/${id}`));
+        return this.http.get<Categoria>(this.getUrl(`${id}`));
     }
 
     public excluir(id):Observable<any>{
-        return this.http.delete(this.getUrl(`/${id}`));
+        return this.http.delete(this.getUrl(`${id}`));
     }
 
 
