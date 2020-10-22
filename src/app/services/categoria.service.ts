@@ -35,5 +35,4 @@ export class CategoriaService extends AbstractService {
         return this.http.delete(this.getUrl(`${id}`));
     }
 
-
 }
