@@ -24,6 +24,7 @@ export class CategoriaCadastroComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
+      id:new FormControl(),
       nome:new FormControl(),
       descricao:new FormControl()
     });
