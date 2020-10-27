@@ -3,10 +3,22 @@
         <mat-card-title>
             Pesquisa de Usuários
         </mat-card-title>
-
+        <mat-card-subtitle>
+            <form [formGroup]="form" fxLayout="row">
+                <mat-form-field>
+                    <input matInput placeholder="Pesquisar" formControlName="pesquisa">
+                </mat-form-field>
+                <button mat-raised-button (click)="pesquisar()">Pesquisar</button>
+                <button mat-raised-button (click)="novo()">Novo</button>
+            </form>
+        </mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
         <table mat-table [dataSource]="dataSource">
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef> Código </th>
+                <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+            </ng-container>
             <ng-container matColumnDef="nome">
                 <th mat-header-cell *matHeaderCellDef> Nome </th>
                 <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
