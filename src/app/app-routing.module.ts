@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CategoriaCadastroComponent } from './pages/categoria/categoria-cadastro/categoria-cadastro.component';
 import { CategoriaPesquisaComponent } from './pages/categoria/categoria-pesquisa/categoria-pesquisa.component';
+import { ContaCadastroComponent } from './pages/conta/conta-cadastro/conta-cadastro.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path:'categoria/pesquisa',
     component:CategoriaPesquisaComponent
+  },
+  {
+    path:'conta/cadastro',
+    component:ContaCadastroComponent
   }
 ];
 

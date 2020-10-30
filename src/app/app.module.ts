@@ -14,18 +14,22 @@ import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatMenuModule} from '@angular/material/menu';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatSelectModule} from '@angular/material/select';
 import { UsuarioPesquisaComponent } from './pages/usuario/usuario-pesquisa/usuario-pesquisa.component';
 import {MatTableModule} from '@angular/material/table';
 import { CategoriaCadastroComponent } from './pages/categoria/categoria-cadastro/categoria-cadastro.component';
 import { CategoriaPesquisaComponent } from './pages/categoria/categoria-pesquisa/categoria-pesquisa.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ContaCadastroComponent } from './pages/conta/conta-cadastro/conta-cadastro.component';
 @NgModule({
   declarations: [
     AppComponent,
     UsuarioCadastroComponent,
     UsuarioPesquisaComponent,
     CategoriaCadastroComponent,
-    CategoriaPesquisaComponent
+    CategoriaPesquisaComponent,
+    ContaCadastroComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +41,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
+    MatSelectModule,
+    MatDatepickerModule,
     MatToolbarModule,
     MatMenuModule,
     FlexLayoutModule,
